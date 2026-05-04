@@ -40,7 +40,8 @@ class AcGameMenu {
     add_listening_events() {
         let outer=this;
            this.$single_mode.click(function(){
-                 console.log("single");
+                 outer.hide();
+               outer.root.playground.show();
            });
 
         this.$multi_mode.click(function(){
@@ -50,5 +51,13 @@ class AcGameMenu {
         this.$settings.click(function(){
                  console.log("setting");
         });
+    }
+
+    show() {  //显示menu界面
+         this.$menu.show();
+    }
+
+    hide() { //关闭menu界面
+         this.$menu.hide();
     }
 }
